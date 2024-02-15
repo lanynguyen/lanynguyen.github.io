@@ -1,3 +1,99 @@
 html {
-    background-color: yellow
+    background-color: #F0EDE6;
+}
+
+body {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 20px;
+}
+
+p {
+    position: absolute;   
+}
+
+h1 {
+    font-family: 'Berkshire Swash', 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 60px;
+    color: #421809;
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Arima', Helvetica, sans-serif;
+    text-align: center;
+    font-size: 40px;
+    color: #713621;
+    margin: 0;
+}
+
+h3 {
+    font-family: 'Sacramento', Helvetica, sans-serif;
+    text-align: center;
+    font-size: 34px;
+    color: #713621;
+    margin-top: 100;
+}
+
+#boxes {
+    left: 50%;
+    right: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.box1 {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    background-image: url('box 1 pts.png');
+    background-size: cover;
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    background-image: url('box 2 pts.png');
+    background-size: cover;
+}
+
+.box3 {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    background-image: url('box 3 pts.png');
+    background-size: cover;
+}
+
+.pearl {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    background-image: url('box 2 pts.png');
+    background-size: cover;
+}
+
+.pearl::before {
+    content: "";
+
+}
+
+a {
+    color: #421809;;
+}
+
+a:hover {
+    color: pink;
+}
+
+#arrow {
+    text-align: center;
+    margin: 50px;
+    font-size: 25px;
+    color: #713621;
 }
