@@ -1,51 +1,226 @@
-html {
-    background-color: #F0EDE6;
+html, body {
+    margin: 0px;
+    min-height: 1000vh;
+    scroll-behavior: smooth;
+    background-color: rgb(255, 252, 242);
 }
-
-div {
-    display: block;
-}
-
-body {
-    padding-top: 60px;
-}
-
-p {
-    position: absolute;   
-}
-
-div {
-    display: block;
-}
-
-h1 {
-    font-family: 'Berkshire Swash', 'Times New Roman', Times, serif;
-    text-align: center;
-    font-size: 80px;
-    color: #421809;
-    margin: 0;
-}
-
-h2 {
-    font-family: 'Arima', Helvetica, sans-serif;
-    text-align: center;
-    font-size: 60px;
-    color: #713621;
-    margin: 0;
-}
-
-h3 {
-    font-family: 'Sacramento', Helvetica, sans-serif;
-    text-align: center;
-    font-size: 40px;
-    color: #713621;
-}
-
-h4 {
-    font-family: 'Arima', Helvetica, sans-serif;
-    text-align: center;
-    font-size: 30px;
-    color: #713621;
-    margin-top: 40;
+  
+#title-wrapper {
     display: inline-block;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #bab5ae;
+    background-image: linear-gradient( rgba(205, 201, 196, 0.5), rgba(158, 153, 144, 0.5) ), url("marilyn\ icon.jpeg");
+    z-index: 2;
+}
+  
+h1 {
+    font-family: "Aboreto", sans-serif;
+    font-size: 12vw;
+    position: relative;
+    padding-top: 180px;
+    padding-bottom: 60px;
+    margin: auto;
+    text-align: center;
+}
+
+input {
+    display: none;
+}
+
+#fixed-position-wrapper-1 {
+    position: relative;
+    width: 100vw;
+    height: 85vh;
+    background-color: #5e1b1bec;
+    z-index: 0;
+}
+  
+#pose-1 {
+    position: fixed;
+    top: calc(50vh - 40vh);
+    left: calc(50vw - 29vh);
+    width: 65vh;
+    height: 80vh;
+    background-image: url(pose1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+label {
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    z-index: 10;
+    position: sticky;
+    top: 0;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#labels {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#currentmarilyn {
+    position: fixed;
+    top: calc(50vh - 40vh);
+    left: calc(50vw - 29vh);
+    width: 65vh;
+    height: 80vh;
+    background-image: url(pose1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#marilyn1picker:checked ~ #currentmarilyn {
+    background-image: url(pose1.png);
+}
+
+#marilyn2picker:checked ~ #currentmarilyn {
+    left: calc(50vw - 45vh);
+    width: 95vh;
+    height: 82vh;
+    background-image: url(pose2.png);
+}
+
+#marilyn3picker:checked ~ #currentmarilyn {
+    left: calc(50vw - 32vh);
+    top: calc(50vh - 45vh);
+    width: 95vh;
+    height: 90vh;
+    background-image: url(pose3.png);
+}
+  
+#absolute-position-wrapper-2 {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+  
+#outfit-1 {
+    position: absolute;
+    bottom: 0px;
+    left: calc(50vw - 17vh);
+    width: 80vh;
+    height: 85vh;
+    background-image: url(outfit1.png); 
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+#outfit-2 {
+    position: absolute;
+    bottom: 0px;
+    left: calc(50vw - 18.5vh);
+    width: 50vh;
+    height: 80vh;
+    background-image: url(outfit2.png); 
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#outfit-3 {
+    position: absolute;
+    bottom: 0px;
+    left: calc(50vw - 12vh);
+    width: 30vh;
+    height: 80vh;
+    background-image: url(outfit3.png); 
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#outfit-4 {
+    position: absolute;
+    bottom: 0px;
+    left: calc(50vw - 10vh);
+    width: 26vh;
+    height: 80vh;
+    background-image: url(outfit4.png); 
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#outfit-5 {
+    position: absolute;
+    bottom: 0px;
+    left: calc(50vw - 12vh);
+    width: 30vh;
+    height: 80vh;
+    background-image: url(outfit5.png); 
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#outfit-6 {
+    position: absolute;
+    bottom: 0px;
+    left: calc(50vw - 15vh);
+    width: 32vh;
+    height: 80vh;
+    background-image: url(outfit6.png); 
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#outfit-7 {
+    position: absolute;
+    bottom: 0px;
+    left: calc(50vw - 15.78vh);
+    width: 58vh;
+    height: 80vh;
+    background-image: url(outfit7.png); 
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#outfit-8 {
+    position: absolute;
+    bottom: 0px;
+    left: calc(50vw - 12vh);
+    width: 27vh;
+    height: 80vh;
+    background-image: url(outfit8.png); 
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#outfit-9 {
+    position: absolute;
+    bottom: 0px;
+    left: calc(50vw - 12vh);
+    width: 26vh;
+    height: 80vh;
+    background-image: url(outfit9.png); 
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#outfit-10 {
+    position: absolute;
+    bottom: 0px;
+    left: calc(50vw - 11vh);
+    width: 26vh;
+    height: 80vh;
+    background-image: url(outfit10.png); 
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#outfit-11 {
+    position: absolute;
+    bottom: 0px;
+    left: calc(50vw - 12vh);
+    width: 28vh;
+    height: 80vh;
+    background-image: url(outfit11.png); 
+    background-size: contain;
+    background-repeat: no-repeat;
 }
