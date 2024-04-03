@@ -1,0 +1,61 @@
+<head>
+    <title>  The AC Experiment </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>  The "AC" Experiment </h1>
+    <div id="content" style="display:none;">
+        The only way I could do that was if you wanted me too I could come and pick it out and then I can go pick up it from your place or you could just pick me out of there or you could pick me out from the store or you can just come pick me out or you could go to my house or you can pick me out if that's what you're going with your car or you could drive it home with you if that's easier and I could pick you out from there or whatever and then I can come pick it out or you could come pick you could come over anytime after work if that's what works best and you could come and I could come pick you guys can come pick me out and then I could pick it out and pick you guys could pick you up whatever you guys could pick you can pick you up and pick you up or you could pick it out and pick you up if you guys could just pick me and I'll pick you guys could come over there or you could just pick you up from school or you could come over here or you could come pick it would just pick it out and pick you can just pick you can come pick you guys can just pick it out and pick you up whatever you guys could just let you know and I don't care about it I'm just saying if I have
+        </div>
+        
+        <div id="display"></div>
+        
+        <script>
+        function displayWordByWord() {
+            const content = document.getElementById("content").innerText;
+            const words = content.split(/\s+/);
+            const displayArea = document.getElementById("display");
+            let currentIndex = 0;
+        
+            function displayNextWord() {
+                if (currentIndex < words.length) {
+                    displayArea.innerHTML += (currentIndex > 0 ? " " : "") + words[currentIndex] + '<span class="cursor">|</span>';
+                    if (currentIndex > 0) {
+                        const cursors = displayArea.getElementsByClassName('cursor');
+                        if (cursors.length > 1) {
+                            cursors[0].remove();
+                        }
+                    }
+                    currentIndex++;
+                    setTimeout(displayNextWord, 1000);
+                }
+            }
+        
+            displayNextWord();
+        }
+        window.onload = displayWordByWord;
+        </script>
+        
+    <div id="phonescreen">
+        <a href="fifth.html"> 
+            <img src="text4.png" width="300px">
+        </a>
+    </div>
+    
+    <audio id="backgroundMusic" src="bgmusic.mp3"></audio>
+    <button id="musicToggle">Play Music</button>
+
+    <script>
+        document.getElementById('musicToggle').addEventListener('click', function() {
+            var audio = document.getElementById('backgroundMusic');
+            if (audio.paused) {
+                audio.play();
+                this.textContent = 'Pause Music'; // Change button text to "Pause Music"
+            } else {
+                audio.pause();
+                this.textContent = 'Play Music'; // Change button text back to "Play Music"
+            }
+        });
+    </script>
+</body>
