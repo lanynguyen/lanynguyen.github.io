@@ -1,226 +1,176 @@
-html, body {
-    margin: 0px;
-    min-height: 1000vh;
-    scroll-behavior: smooth;
-    background-color: rgb(255, 252, 242);
-}
-  
-#title-wrapper {
-    display: inline-block;
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background-color: #bab5ae;
-    background-image: linear-gradient( rgba(205, 201, 196, 0.5), rgba(158, 153, 144, 0.5) ), url("marilyn\ icon.jpeg");
-    z-index: 2;
-}
-  
-h1 {
-    font-family: "Aboreto", sans-serif;
-    font-size: 12vw;
-    position: relative;
-    padding-top: 180px;
-    padding-bottom: 60px;
-    margin: auto;
-    text-align: center;
-}
-
-input {
-    display: none;
-}
-
-#fixed-position-wrapper-1 {
-    position: relative;
-    width: 100vw;
-    height: 85vh;
-    background-color: #5e1b1bec;
-    z-index: 0;
-}
-  
-#pose-1 {
-    position: fixed;
-    top: calc(50vh - 40vh);
-    left: calc(50vw - 29vh);
-    width: 65vh;
-    height: 80vh;
-    background-image: url(pose1.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-label {
-    position: sticky;
-    top: 0;
-    padding: 20px;
-    z-index: 10;
-    position: sticky;
-    top: 0;
-    flex-direction: row;
-    justify-content: center;
-}
-
-#labels {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-#currentmarilyn {
-    position: fixed;
-    top: calc(50vh - 40vh);
-    left: calc(50vw - 29vh);
-    width: 65vh;
-    height: 80vh;
-    background-image: url(pose1.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#marilyn1picker:checked ~ #currentmarilyn {
-    background-image: url(pose1.png);
-}
-
-#marilyn2picker:checked ~ #currentmarilyn {
-    left: calc(50vw - 45vh);
-    width: 95vh;
-    height: 82vh;
-    background-image: url(pose2.png);
-}
-
-#marilyn3picker:checked ~ #currentmarilyn {
-    left: calc(50vw - 32vh);
-    top: calc(50vh - 45vh);
-    width: 95vh;
-    height: 90vh;
-    background-image: url(pose3.png);
-}
-  
-#absolute-position-wrapper-2 {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
-}
-  
-#outfit-1 {
-    position: absolute;
-    bottom: 0px;
-    left: calc(50vw - 17vh);
-    width: 80vh;
-    height: 85vh;
-    background-image: url(outfit1.png); 
-    background-size: contain;
-    background-repeat: no-repeat;
+  html, body {
+    margin: 0;
+    cursor: url('curcle.png'), pointer;
   }
 
-#outfit-2 {
-    position: absolute;
-    bottom: 0px;
-    left: calc(50vw - 18.5vh);
-    width: 50vh;
-    height: 80vh;
-    background-image: url(outfit2.png); 
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+  ::selection {
+    color: #b30000;
+    background: rgb(237, 234, 220);
+  }
 
-#outfit-3 {
-    position: absolute;
-    bottom: 0px;
-    left: calc(50vw - 12vh);
-    width: 30vh;
-    height: 80vh;
-    background-image: url(outfit3.png); 
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+  /* Scrollbar Width */
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Change the position of the scrollbar */
+  #leftcol {
+    direction: rtl;
+    text-align: left;
+  }
+  
+  #leftcol > * {
+    direction: ltr;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(185, 185, 185); 
+    border-radius: 8px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(156, 213, 241); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
+  
+  #leftcol {
+    font-family: 'Aboreto';
+    color: #211e1ede;
+    font-size: 7.5em;
+    width: 65%;
+    height: 100vh;
+    float: left;
+    background: #faf8f4;
+    background-size: 200%;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  #rightcol {
+    font-family: 'Tenor Sans';
+    color: #211e1ede;
+    font-size: 3.5em;
+    text-align: center;
+    width: 35%;
+    height: 100vh;
+    float: right;
+    background: #faf8f4;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  
+  #floatclear {
+    float: none;
+  }
+  
+  .title {
+    margin-left: 30px;
+  }
 
-#outfit-4 {
-    position: absolute;
-    bottom: 0px;
-    left: calc(50vw - 10vh);
-    width: 26vh;
-    height: 80vh;
-    background-image: url(outfit4.png); 
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+  a {
+    width: 4em;
+    height: 1.25em;
+    border: 5px dashed rgb(237, 234, 220);
+    border-radius: 8px;
+    text-align: center;
+    padding: 60px;
+    margin: 16px;
+    color: #211e1ede;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    cursor: url('curcle2.png'), pointer;
+    z-index: 1000;
+  }
 
-#outfit-5 {
-    position: absolute;
-    bottom: 0px;
-    left: calc(50vw - 12vh);
-    width: 30vh;
-    height: 80vh;
-    background-image: url(outfit5.png); 
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+  a[href="https://codepen.io/Lan-Nguyen-the-heppy/pen/wvOmaKW"]:hover {
+    background-image: url('s1a1.png') ;
+    opacity: 0.8;
+  }
+  a[href="https://codepen.io/Lan-Nguyen-the-heppy/pen/yLwpwxY?editors=1100"]:hover {
+    background-image: url('s1a2.png') ;
+    opacity: 0.8;
+  }
+  a[href="https://lanynguyen.github.io/pearlmarket/index.html"]:hover {
+    background-image: url('s1fp.png');
+    opacity: 0.9;
+  }
+  a[href="https://lanynguyen.github.io/pearlmarket/index.html#webring"]:hover {
+    background-image: url('s2a1.png');
+    opacity: 0.9;
+  }
+  a[href="https://lanynguyen.github.io/s2a2/index.html"]:hover {
+    background-image: url('s2a2.png');
+    opacity: 0.9;
+  }
+  a[href="https://editor.p5js.org/nglan/full/_ChfgIWjo"]:hover {
+    background-image: url('s2fp.png');
+    opacity: 0.9;
+  }
+  a[href="https://lanynguyen.github.io/s3a1/index.html"]:hover {
+    background-image: url('s3a1.png');
+    opacity: 0.9;
+  }
+  a[href="https://wudora.github.io/s3a2/index.html"]:hover {
+    background-image: url('s3a2.png');
+    opacity: 0.9;
+  }
+  a[href="https://editor.p5js.org/nglan/full/MyKhdI0df"]:hover {
+    background-image: url('s3fp.png');
+    opacity: 0.9;
+  }
 
-#outfit-6 {
+  #spawnButton {
     position: absolute;
-    bottom: 0px;
-    left: calc(50vw - 15vh);
-    width: 32vh;
-    height: 80vh;
-    background-image: url(outfit6.png); 
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+    bottom: 32px;
+    left: 3%;
+    padding: 16px 24px;
+    font-size: 24px;
+    font-family: 'Tenor Sans';
+    background-color: rgb(36, 117, 157);;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
 
-#outfit-7 {
+  #spawnButton:hover{
+    background-color: #b30000;
+    cursor: url('curcle3.png'), pointer;
+  }
+  .random-box {
     position: absolute;
-    bottom: 0px;
-    left: calc(50vw - 15.78vh);
-    width: 58vh;
-    height: 80vh;
-    background-image: url(outfit7.png); 
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    border: 2px solid #bab7afde;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    color: #211e1ede;
+    cursor: url('curcle2.png'), pointer;
+    overflow-y: auto;
+  }
 
-#outfit-8 {
-    position: absolute;
-    bottom: 0px;
-    left: calc(50vw - 12vh);
-    width: 27vh;
-    height: 80vh;
-    background-image: url(outfit8.png); 
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#outfit-9 {
-    position: absolute;
-    bottom: 0px;
-    left: calc(50vw - 12vh);
-    width: 26vh;
-    height: 80vh;
-    background-image: url(outfit9.png); 
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#outfit-10 {
-    position: absolute;
-    bottom: 0px;
-    left: calc(50vw - 11vh);
-    width: 26vh;
-    height: 80vh;
-    background-image: url(outfit10.png); 
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#outfit-11 {
-    position: absolute;
-    bottom: 0px;
-    left: calc(50vw - 12vh);
-    width: 28vh;
-    height: 80vh;
-    background-image: url(outfit11.png); 
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+  @media screen and (max-width: 1000px) {
+    #leftcol {
+      width: 100%;
+    }
+    #rightcol {
+      width: 100%;
+      height: auto;
+      overflow-y: hidden;
+    }
+  }
