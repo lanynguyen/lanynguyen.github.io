@@ -1,35 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title> Lan Nguyen's Portfolio </title>
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Gayathri:wght@100;400;700&family=Tenor+Sans&display=swap" rel="stylesheet">
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lan Nguyen — Portfolio</title>
+<meta name="description" content="Lan Nguyen — Associate Product Manager. Product deliverables, case studies, and experiments.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fffdfb;font-family:'Nunito Sans',sans-serif;color:#2b2320;-webkit-font-smoothing:antialiased}
+a{color:oklch(0.55 0.19 24);text-decoration:none}
+a:hover{color:oklch(0.46 0.19 24)}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-4px) rotate(8deg)}}
+.btn-primary:hover{filter:brightness(1.06)}
+.btn-outline:hover{border-color:oklch(0.62 0.19 24)}
+.case-card{transition:transform .25s}
+.case-card:hover{transform:translateY(-4px)}
+.social-link:hover{background:rgba(255,255,255,.12)}
+</style>
 </head>
 <body>
-    <div id="leftcol">
-      <div class="title">
-        <p>Hi! I'm 
-          <br> Lan Nguyen.
-        </p>
-      </div>
-      <button id="spawnButton">My Readings</button>
-    </div>
-      
-    <div id="rightcol">
-      <a href="https://codepen.io/Lan-Nguyen-the-heppy/pen/wvOmaKW">S1A1</a>
-      <a href="https://codepen.io/Lan-Nguyen-the-heppy/pen/yLwpwxY?editors=1100">S1A2</a>
-      <a href="https://lanynguyen.github.io/pearlmarket/index.html">S1FP</a>
-      <a href="https://lanynguyen.github.io/pearlmarket/index.html#webring">S2A1</a>
-      <a href="https://lanynguyen.github.io/s2a2/index.html">S2A2</a>
-      <a href="https://editor.p5js.org/nglan/full/_ChfgIWjo">S2FP</a>
-      <a href="https://lanynguyen.github.io/s3a1/index.html">S3A1</a>
-      <a href="https://wudora.github.io/s3a2/index.html">S3A2</a>
-      <a href="https://editor.p5js.org/nglan/full/MyKhdI0df">S3FP</a>
-    </div>
-      
-    <div id="floatclar"></div>
 
-    <script src="script.js"></script>
+<div style="width:100%;min-height:100vh;background:#fffdfb;background-image:radial-gradient(oklch(0.62 0.19 24 / .05) 1px,transparent 1px);background-size:26px 26px">
+
+<!-- ===== NAV ===== -->
+<div style="position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(255,253,251,.82);border-bottom:1px solid #efe7df">
+  <div style="max-width:1160px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;justify-content:space-between">
+    <a href="#top" style="display:flex;align-items:center;gap:10px;font-family:'Quicksand',sans-serif;font-weight:700;font-size:18px;color:#2b2320">
+      <span style="width:30px;height:30px;border-radius:50%;background:oklch(0.62 0.19 24);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px">L</span>
+    </a>
+    <div style="display:flex;align-items:center;gap:26px;font-family:'Quicksand',sans-serif;font-weight:600;font-size:14px;color:#6b615c">
+      <a href="#board" style="color:#6b615c">My Board</a>
+      <a href="#decks" style="color:#6b615c">Case Studies</a>
+      <a href="#about" style="color:#6b615c">About</a>
+      <a href="Lan%20Nguyen%20Resume.pdf" target="_blank" rel="noopener" style="color:#6b615c">Resume</a>
+      <a href="#contact" style="background:oklch(0.62 0.19 24);color:#fff;padding:9px 17px;border-radius:24px">Save profile</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<div id="top" style="max-width:1160px;margin:0 auto;padding:76px 32px 44px;text-align:center;position:relative">
+  <span style="position:absolute;left:16%;top:70px;font-size:26px;color:oklch(0.7 0.16 24);animation:floaty 4s ease-in-out infinite">&#10022;</span>
+  <span style="position:absolute;right:18%;top:120px;font-size:18px;color:oklch(0.75 0.13 24);animation:floaty 5s ease-in-out infinite .8s">&#10022;</span>
+  <div style="display:inline-flex;align-items:center;gap:7px;font-family:'Quicksand',sans-serif;font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:oklch(0.5 0.19 24);background:oklch(0.95 0.03 24);padding:7px 15px;border-radius:22px;margin-bottom:24px">
+    <span>&#10022;</span> Associate Product Manager
+  </div>
+  <h1 style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:66px;line-height:1.04;margin:0 0 20px;letter-spacing:-.025em;max-width:840px;margin-left:auto;margin-right:auto">Lan Nguyen</h1>
+  <p style="margin:0 auto 30px;max-width:520px;font-size:18px;line-height:1.6;color:#6b615c">Trained in how people think, sharpened in how businesses run. <br> I connect <italic>behavioral science</italic>, product strategy, and AI-native operations into building products that delight users.</p>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+    <a href="#board" class="btn-primary" style="background:oklch(0.62 0.19 24);color:#fff;font-family:'Quicksand',sans-serif;font-weight:600;font-size:15px;padding:14px 28px;border-radius:28px">Explore my board</a>
+    <a href="Lan%20Nguyen%20Resume.pdf" target="_blank" rel="noopener" class="btn-outline" style="border:1.5px solid #e3ddd6;background:#fff;color:#2b2320;font-family:'Quicksand',sans-serif;font-weight:600;font-size:15px;padding:14px 26px;border-radius:28px">Download resume</a>
+  </div>
+</div>
+
+<!-- ===== THE BOARD ===== -->
+<div id="board" style="max-width:1160px;margin:0 auto;padding:56px 32px 20px;scroll-margin-top:80px">
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:26px">
+    <div>
+      <div style="display:flex;align-items:center;gap:8px;font-family:'Quicksand',sans-serif;font-weight:600;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:oklch(0.5 0.19 24);margin-bottom:8px"><span>&#10022;</span> My board</div>
+      <h2 style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:34px;margin:0;letter-spacing:-.02em">Career Aesthetics</h2>
+    </div>
+    <div id="board-filters" style="display:flex;gap:8px;flex-wrap:wrap">
+      <button type="button" data-filter="all" style="cursor:pointer;font-family:'Quicksand',sans-serif;font-weight:600;font-size:13px;padding:8px 15px;border-radius:20px;border:1.5px solid oklch(0.62 0.19 24);background:oklch(0.62 0.19 24);color:#fff">All</button>
+      <button type="button" data-filter="0-1" class="filter-pill" style="cursor:pointer;font-family:'Quicksand',sans-serif;font-weight:600;font-size:13px;padding:8px 15px;border-radius:20px;border:1.5px solid #efe7df;background:#fff;color:#6b615c">0&rarr;1</button>
+      <button type="button" data-filter="growth" class="filter-pill" style="cursor:pointer;font-family:'Quicksand',sans-serif;font-weight:600;font-size:13px;padding:8px 15px;border-radius:20px;border:1.5px solid #efe7df;background:#fff;color:#6b615c">Growth</button>
+      <button type="button" data-filter="design" class="filter-pill" style="cursor:pointer;font-family:'Quicksand',sans-serif;font-weight:600;font-size:13px;padding:8px 15px;border-radius:20px;border:1.5px solid #efe7df;background:#fff;color:#6b615c">Design</button>
+      <button type="button" data-filter="research" class="filter-pill" style="cursor:pointer;font-family:'Quicksand',sans-serif;font-weight:600;font-size:13px;padding:8px 15px;border-radius:20px;border:1.5px solid #efe7df;background:#fff;color:#6b615c">Research</button>
+    </div>
+  </div>
+
+  <div style="column-count:4;column-gap:20px">
+
+    <!-- Proscia AI automation -->
+    <a href="https://proscia.com" target="_blank" rel="noopener" class="case-card pin" data-cat="0-1" style="break-inside:avoid;display:inline-block;width:100%;margin:0 0 20px;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 3px 14px rgba(43,35,32,.07);position:relative;color:inherit">
+      <div style="position:relative;height:180px;background:#fff;display:flex;align-items:center;justify-content:center;padding:28px">
+        <img src="images/logos/proscia.png" alt="Proscia logo" style="max-width:78%;max-height:70%;object-fit:contain">
+      </div>
+      <div style="padding:16px 17px 18px">
+        <div style="font-family:'Quicksand',sans-serif;font-weight:600;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.5 0.19 24);margin-bottom:7px">Proscia &middot; 0&rarr;1</div>
+        <div style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:16px;line-height:1.25;margin-bottom:5px">AI Automation Tooling</div>
+        <div style="font-size:12.5px;color:#8a7f79;line-height:1.5">Led ideation &amp; technical build of AI tools that cut manual work by 3 hrs/sprint.</div>
+      </div>
+    </a>
+
+    <!-- metric: design timelines -->
+    <div class="pin" data-cat="design" style="break-inside:avoid;display:inline-block;width:100%;margin:0 0 20px;border-radius:18px;background:oklch(0.62 0.19 24);color:#fff;box-shadow:0 3px 14px rgba(43,35,32,.07);padding:22px 18px">
+      <div style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:40px;line-height:.95">&minus;50%</div>
+      <div style="font-size:13px;opacity:.92;margin-top:6px;line-height:1.45">design timelines, after building a scalable Figma design system at Branch</div>
+    </div>
+
+    <!-- Ulta Beauty -->
+    <a href="https://ulta.com" target="_blank" rel="noopener" class="case-card pin" data-cat="growth" style="break-inside:avoid;display:inline-block;width:100%;margin:0 0 20px;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 3px 14px rgba(43,35,32,.07);position:relative;color:inherit">
+      <div style="position:relative;height:150px;background:#fff;display:flex;align-items:center;justify-content:center;padding:28px">
+        <img src="images/logos/ulta-beauty.png" alt="Ulta Beauty logo" style="max-width:70%;max-height:65%;object-fit:contain">
+      </div>
+      <div style="padding:16px 17px 18px">
+        <div style="font-family:'Quicksand',sans-serif;font-weight:600;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.5 0.19 24);margin-bottom:7px">Ulta Beauty &middot; Growth</div>
+        <div style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:16px;line-height:1.25;margin-bottom:5px">Conversion &amp; Retention</div>
+        <div style="font-size:12.5px;color:#8a7f79;line-height:1.5">Drove a +1.8% conversion lift by finding UX friction across web &amp; mobile.</div>
+      </div>
+    </a>
+
+    <!-- Branch Furniture -->
+    <a href="https://www.branchfurniture.com/pages/careers" target="_blank" rel="noopener" class="case-card pin" data-cat="design" style="break-inside:avoid;display:inline-block;width:100%;margin:0 0 20px;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 3px 14px rgba(43,35,32,.07);position:relative;color:inherit">
+      <div style="position:relative;height:210px">
+        <img src="images/logos/branch-furniture.webp" alt="Branch Furniture logo" style="display:block;width:100%;height:100%;object-fit:cover">
+      </div>
+      <div style="padding:16px 17px 18px">
+        <div style="font-family:'Quicksand',sans-serif;font-weight:600;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.5 0.19 24);margin-bottom:7px">Branch Furniture &middot; Design</div>
+        <div style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:16px;line-height:1.25;margin-bottom:5px">Careers Page Redesign</div>
+        <div style="font-size:12.5px;color:#8a7f79;line-height:1.5">Owned full lifecycle in Figma &amp; Shogun; A/B tests projected +4% conversion.</div>
+      </div>
+    </a>
+
+    <!-- quote / award -->
+    <div class="pin" style="break-inside:avoid;display:inline-block;width:100%;margin:0 0 20px;border-radius:18px;background:#fdf3e3;box-shadow:0 3px 14px rgba(43,35,32,.07);padding:20px 18px">
+      <div style="font-size:22px;margin-bottom:8px">&#10022;</div>
+      <div style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:15px;line-height:1.35;color:#7a5a1e">2nd place, NYU PMC Case Competition</div>
+      <div style="font-size:12px;color:#a68a52;margin-top:7px;line-height:1.45">Judged by senior PMs from Meta, Google &amp; Capital One.</div>
+    </div>
+
+    <!-- PowerNotes accessibility -->
+    <a href="https://powernotes.com/" target="_blank" rel="noopener" class="case-card pin" data-cat="design" style="break-inside:avoid;display:inline-block;width:100%;margin:0 0 20px;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 3px 14px rgba(43,35,32,.07);position:relative;color:inherit">
+      <div style="position:relative;height:140px;background:#fff;display:flex;align-items:center;justify-content:center;padding:28px">
+        <img src="images/logos/powernotes.svg" alt="PowerNotes logo" style="max-width:75%;max-height:60%;object-fit:contain">
+      </div>
+      <div style="padding:16px 17px 18px">
+        <div style="font-family:'Quicksand',sans-serif;font-weight:600;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.5 0.19 24);margin-bottom:7px">PowerNotes &middot; A11y</div>
+        <div style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:16px;line-height:1.25;margin-bottom:5px">Accessibility Overhaul</div>
+        <div style="font-size:12.5px;color:#8a7f79;line-height:1.5">+25% compliance (WCAG A &rarr; AA) for learners with disabilities.</div>
+      </div>
+    </a>
+
+    <!-- leadership -->
+    <div class="pin" style="break-inside:avoid;display:inline-block;width:100%;margin:0 0 20px;border-radius:18px;background:#2b2320;color:#fff;box-shadow:0 3px 14px rgba(43,35,32,.07);padding:20px 18px">
+      <div style="font-family:'Quicksand',sans-serif;font-weight:600;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.78 0.13 24);margin-bottom:9px">Product Space @ Penn</div>
+      <div style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:17px;line-height:1.25;margin-bottom:8px">Co-President, 150+ members</div>
+      <div style="font-size:12.5px;color:#c9beb6;line-height:1.5">Ran 10 PM workshops &amp; an exec board on a $6k budget; 30+ members landed PM internships.</div>
+    </div>
+
+    <!-- Wharton research -->
+    <a href="https://www.mediavillage.com/article/wharton-neuro-rates-tv-high-over-digital-in-brain-sales/print/" target="_blank" rel="noopener" class="case-card pin" data-cat="research" style="break-inside:avoid;display:inline-block;width:100%;margin:0 0 20px;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 3px 14px rgba(43,35,32,.07);position:relative;color:inherit">
+      <div style="position:relative;height:170px;background:#fff;display:flex;align-items:center;justify-content:center;padding:20px">
+        <img src="images/logos/wharton-neuroscience.jpg" alt="Wharton Neuroscience Initiative logo" style="max-width:60%;max-height:85%;object-fit:contain">
+      </div>
+      <div style="padding:16px 17px 18px">
+        <div style="font-family:'Quicksand',sans-serif;font-weight:600;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:oklch(0.5 0.19 24);margin-bottom:7px">Wharton NI &middot; Research</div>
+        <div style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:16px;line-height:1.25;margin-bottom:5px">Neuro Ad Research</div>
+        <div style="font-size:12.5px;color:#8a7f79;line-height:1.5">Turned neural data into ad-placement insight for FOX; ran studies with 150+ participants.</div>
+      </div>
+    </a>
+
+    <!-- metric: clients -->
+    <div class="pin" data-cat="growth" style="break-inside:avoid;display:inline-block;width:100%;margin:0 0 20px;border-radius:18px;background:oklch(0.95 0.04 24);color:#7a2f22;box-shadow:0 3px 14px rgba(43,35,32,.05);padding:20px 18px">
+      <div style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:36px;line-height:.95">40%</div>
+      <div style="font-size:13px;margin-top:6px;line-height:1.45;color:#9a4436">more efficient operations via automated data pipelines at Ulta</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== TAKE-HOME DECKS ===== -->
+<div id="decks" style="background:oklch(0.97 0.02 40);border-top:1px solid #efe7df;border-bottom:1px solid #efe7df;margin-top:36px;scroll-margin-top:70px">
+  <div style="max-width:1160px;margin:0 auto;padding:64px 32px">
+    <div style="text-align:center;margin-bottom:40px">
+      <div style="display:inline-flex;align-items:center;gap:7px;font-family:'Quicksand',sans-serif;font-weight:600;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:oklch(0.5 0.19 24);margin-bottom:12px"><span>&#10022;</span> Case studies <span>&#10022;</span></div>
+      <h2 style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:38px;margin:0 0 12px;letter-spacing:-.02em">Deep dives into my product thinking</h2>
+      <p style="margin:0 auto;max-width:560px;font-size:16px;line-height:1.6;color:#6b615c">End-to-end product cases &mdash; how I frame the problem, form a hypothesis, shape a solution, and pick the metrics that matter.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+
+      <a href="case-studies/instacart-autonomous-delivery.pdf" target="_blank" rel="noopener" class="case-card" style="display:block;color:inherit;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 4px 18px rgba(43,35,32,.08);border:1px solid #efe7df">
+        <div style="position:relative;aspect-ratio:16/10">
+          <img src="images/logos/instacart.webp" alt="Instacart logo" style="display:block;width:100%;height:100%;object-fit:cover">
+          <span style="position:absolute;top:12px;left:12px;background:#2b2320;color:#fff;font-family:'Quicksand',sans-serif;font-weight:700;font-size:11px;padding:6px 12px;border-radius:16px">Strategy</span>
+        </div>
+        <div style="padding:20px 20px 22px">
+          <div style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:18px;line-height:1.25;margin-bottom:7px">Autonomous Delivery Strategy</div>
+          <div style="font-size:13px;color:#8a7f79;line-height:1.55;margin-bottom:14px">APM take-home: framing the opportunity, key tradeoffs, and a rollout plan for aerial &amp; sidewalk-robot last-mile delivery.</div>
+          <div style="display:flex;align-items:center;gap:8px"><span style="font-family:'Quicksand',sans-serif;font-weight:600;font-size:13px;color:oklch(0.5 0.19 24)">Read the take-home &rarr;</span></div>
+        </div>
+      </a>
+
+      <a href="case-studies/duolingo-videos-spec.pdf" target="_blank" rel="noopener" class="case-card" style="display:block;color:inherit;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 4px 18px rgba(43,35,32,.08);border:1px solid #efe7df">
+        <div style="position:relative;aspect-ratio:16/10;background:#dff0e4;display:flex;align-items:center;justify-content:center">
+          <img src="images/logos/duolingo.png" alt="Duolingo logo" style="max-width:55%;max-height:65%;object-fit:contain">
+          <span style="position:absolute;top:12px;left:12px;background:#2b2320;color:#fff;font-family:'Quicksand',sans-serif;font-weight:700;font-size:11px;padding:6px 12px;border-radius:16px">0&rarr;1</span>
+        </div>
+        <div style="padding:20px 20px 22px">
+          <div style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:18px;line-height:1.25;margin-bottom:7px">Spec: Duolingo Videos</div>
+          <div style="font-size:13px;color:#8a7f79;line-height:1.55;margin-bottom:14px">A product spec for a new short-form video format &mdash; from problem framing through MVP scope and success metrics.</div>
+          <div style="display:flex;align-items:center;gap:8px"><span style="font-family:'Quicksand',sans-serif;font-weight:600;font-size:13px;color:oklch(0.5 0.19 24)">Read the spec &rarr;</span></div>
+        </div>
+      </a>
+
+      <a href="case-studies/managexr-analytics-prd.pdf" target="_blank" rel="noopener" class="case-card" style="display:block;color:inherit;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 4px 18px rgba(43,35,32,.08);border:1px solid #efe7df">
+        <div style="position:relative;aspect-ratio:16/10;background:#f7e6dd;display:flex;align-items:center;justify-content:center">
+          <img src="images/logos/managexr.png" alt="ManageXR logo" style="max-width:60%;max-height:45%;object-fit:contain">
+          <span style="position:absolute;top:12px;left:12px;background:#2b2320;color:#fff;font-family:'Quicksand',sans-serif;font-weight:700;font-size:11px;padding:6px 12px;border-radius:16px">Prioritization</span>
+        </div>
+        <div style="padding:20px 20px 22px">
+          <div style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:18px;line-height:1.25;margin-bottom:7px">PRD: Improving Analytics</div>
+          <div style="font-size:13px;color:#8a7f79;line-height:1.55;margin-bottom:14px">A prioritization framework and PRD for ManageXR&rsquo;s device analytics, tied back to core North Star metrics.</div>
+          <div style="display:flex;align-items:center;gap:8px"><span style="font-family:'Quicksand',sans-serif;font-weight:600;font-size:13px;color:oklch(0.5 0.19 24)">Read the PRD &rarr;</span></div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== ABOUT ===== -->
+<div id="about" style="max-width:1160px;margin:0 auto;padding:64px 32px 20px;scroll-margin-top:70px;display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start">
+  <div>
+    <div style="display:flex;align-items:center;gap:8px;font-family:'Quicksand',sans-serif;font-weight:600;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:oklch(0.5 0.19 24);margin-bottom:14px"><span>&#10022;</span> About</div>
+    <h2 style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:32px;margin:0 0 18px;letter-spacing:-.02em;line-height:1.15">Cognitive science meets product craft.</h2>
+    <p style="margin:0 0 16px;font-size:15px;line-height:1.7;color:#6b615c">I studied Computational Cognitive Science at the University of Pennsylvania (Summa Cum Laude, 3.88 GPA) with a Wharton minor in Marketing &amp; Consumer Psychology &mdash; so I think about products through how people actually perceive, decide, and behave.</p>
+    <p style="margin:0;font-size:15px;line-height:1.7;color:#6b615c">Since then I&rsquo;ve worked across product ops, growth, design, and research &mdash; from AI tooling at Proscia to a careers-page redesign at Branch. I love the messy 0&rarr;1 middle where research turns into a roadmap people believe in.</p>
+    <div style="margin-top:24px;padding:18px 20px;background:#fff;border:1px solid #efe7df;border-radius:16px">
+      <div style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:15px;margin-bottom:4px">University of Pennsylvania</div>
+      <div style="font-size:13px;color:#8a7f79;line-height:1.5">B.A. Computational Cognitive Science &middot; Minor, Marketing &amp; Consumer Psychology (Wharton) &middot; May 2025</div>
+    </div>
+  </div>
+  <div>
+    <div style="font-family:'Quicksand',sans-serif;font-weight:600;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:#8a7f79;margin-bottom:16px">Toolkit</div>
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <div>
+        <div style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:14px;margin-bottom:10px;color:#2b2320">Discovery &amp; design</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span style="background:#fff;border:1.5px solid #efe7df;font-size:13px;padding:7px 14px;border-radius:20px;color:#6b615c">Figma</span>
+          <span style="background:#fff;border:1.5px solid #efe7df;font-size:13px;padding:7px 14px;border-radius:20px;color:#6b615c">Qualtrics</span>
+          <span style="background:#fff;border:1.5px solid #efe7df;font-size:13px;padding:7px 14px;border-radius:20px;color:#6b615c">Notion</span>
+          <span style="background:#fff;border:1.5px solid #efe7df;font-size:13px;padding:7px 14px;border-radius:20px;color:#6b615c">WCAG</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:14px;margin-bottom:10px;color:#2b2320">Analytics</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span style="background:#fff;border:1.5px solid #efe7df;font-size:13px;padding:7px 14px;border-radius:20px;color:#6b615c">Pendo</span>
+          <span style="background:#fff;border:1.5px solid #efe7df;font-size:13px;padding:7px 14px;border-radius:20px;color:#6b615c">Adobe Analytics</span>
+          <span style="background:#fff;border:1.5px solid #efe7df;font-size:13px;padding:7px 14px;border-radius:20px;color:#6b615c">Google Analytics</span>
+          <span style="background:#fff;border:1.5px solid #efe7df;font-size:13px;padding:7px 14px;border-radius:20px;color:#6b615c">Microsoft Clarity</span>
+          <span style="background:#fff;border:1.5px solid #efe7df;font-size:13px;padding:7px 14px;border-radius:20px;color:#6b615c">Quantum Metrics</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:14px;margin-bottom:10px;color:#2b2320">Build &amp; data</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span style="background:#fff;border:1.5px solid #efe7df;font-size:13px;padding:7px 14px;border-radius:20px;color:#6b615c">SQL</span>
+          <span style="background:#fff;border:1.5px solid #efe7df;font-size:13px;padding:7px 14px;border-radius:20px;color:#6b615c">Python</span>
+          <span style="background:#fff;border:1.5px solid #efe7df;font-size:13px;padding:7px 14px;border-radius:20px;color:#6b615c">R</span>
+          <span style="background:#fff;border:1.5px solid #efe7df;font-size:13px;padding:7px 14px;border-radius:20px;color:#6b615c">Jira</span>
+          <span style="background:#fff;border:1.5px solid #efe7df;font-size:13px;padding:7px 14px;border-radius:20px;color:#6b615c">Agile Scrum</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CONTACT ===== -->
+<div id="contact" style="max-width:1160px;margin:0 auto;padding:40px 32px 72px;scroll-margin-top:70px">
+  <div style="background:oklch(0.62 0.19 24);border-radius:26px;padding:56px 40px;text-align:center;color:#fff;position:relative;overflow:hidden">
+    <span style="position:absolute;left:12%;top:28px;font-size:24px;color:rgba(255,255,255,.5);animation:floaty 5s ease-in-out infinite">&#10022;</span>
+    <span style="position:absolute;right:14%;bottom:34px;font-size:18px;color:rgba(255,255,255,.5);animation:floaty 4.4s ease-in-out infinite .6s">&#10022;</span>
+    <h2 style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:40px;margin:0 0 14px;letter-spacing:-.02em">Let&rsquo;s build something worth saving.</h2>
+    <p style="margin:0 auto 28px;max-width:440px;font-size:16px;line-height:1.6;opacity:.92">Open to APM &amp; new-grad PM roles. I&rsquo;d love to talk through any of the work on this board.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+           <a href="https://www.linkedin.com/in/lan-ng/" target="_blank" rel="noopener" class="social-link" style="border:1.5px solid rgba(255,255,255,.6);color:#fff;font-family:'Quicksand',sans-serif;font-weight:600;font-size:15px;padding:14px 24px;border-radius:28px">LinkedIn</a>
+           <a href="mailto:lanyng.yen@gmail.com" style="background:#fff;color:oklch(0.5 0.19 24);font-family:'Quicksand',sans-serif;font-weight:700;font-size:15px;padding:14px 26px;border-radius:28px">lanyng.yen@gmail.com</a>
+           <a href="https://github.com/lanynguyen" target="_blank" rel="noopener" class="social-link" style="border:1.5px solid rgba(255,255,255,.6);color:#fff;font-family:'Quicksand',sans-serif;font-weight:600;font-size:15px;padding:14px 24px;border-radius:28px">GitHub</a>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:32px;font-size:13px;color:#a89e97">
+    <div style="display:flex;align-items:center;gap:8px;font-family:'Quicksand',sans-serif;font-weight:600;color:#8a7f79"><span style="width:22px;height:22px;border-radius:50%;background:oklch(0.62 0.19 24);color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px">L</span> Lan Nguyen</div>
+    <div>Philadelphia, PA &middot; 202-813-7180</div>
+  </div>
+</div>
+
+</div>
+<script>
+(function(){
+  var buttons = document.querySelectorAll('#board-filters [data-filter]');
+  var pins = document.querySelectorAll('#board .pin');
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      buttons.forEach(function(b){
+        var active = b === btn;
+        b.style.background = active ? 'oklch(0.62 0.19 24)' : '#fff';
+        b.style.color = active ? '#fff' : '#6b615c';
+        b.style.borderColor = active ? 'oklch(0.62 0.19 24)' : '#efe7df';
+      });
+      var filter = btn.getAttribute('data-filter');
+      pins.forEach(function(pin){
+        var show = filter === 'all' || pin.getAttribute('data-cat') === filter;
+        pin.style.display = show ? 'inline-block' : 'none';
+      });
+    });
+  });
+})();
+</script>
 </body>
+</html>
